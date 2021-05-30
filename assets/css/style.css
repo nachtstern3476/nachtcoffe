@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.mb-2{
+    margin-bottom: 12px; 
+}
+
+.mb-3{
+    max-width: 18px;
+}
+
+.mb-4{
+    margin-bottom: 24px; 
+}
+
+h2, p{
+    margin: 0;
+}
+
+.active{
+    display: block;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(8, 6, 14);
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 15px;
+    padding: 18px 24px;
+}
+
+nav a:hover{
+    font-weight: bold;
+    background-color: #141414;
+}
+
+.toggler{
+    display: none;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    margin: 0 auto;
+    width: min-content;
+}
+
+.toggler .toggler-icon{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../icons/menu.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+nav li{
+    list-style: none;
+}
+
+.jumbotron{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: #3f3f3f;
+    color: white;
+    padding: 15% 25%;
+}
+
+.jumbotron h2{
+    font-size: 48px;
+}
+
+.btn-rounded{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    margin: 0 auto;
+    border-radius: 1000px;
+}
+
+.btn-rounded img{
+    display: inline-block;
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+}
+
+main{
+    overflow: auto;
+}
+
+#about{
+    display: flex;
+    max-width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: #263a53;
+    color: #e9e2d8;
+}
+
+#about p{
+    flex-basis: 55%;
+    margin: auto 0;
+    padding: 0 92px;
+}
+
+#about img{
+    width: 480px;
+    height: auto;
+    flex-basis: 45%;
+}
+
+#services{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    height: 100vh;
+    margin: 92px;
+    text-align: center;
+}
+
+.service-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 28px;
+}
+
+.service-container .card{
+    flex: 1 0 20%;
+    margin: 48px 12px 0 12px;
+}
+
+.service-container .card h4{
+    font-size: 18px;
+}
+
+.service-container .card p{
+    font-size: 12px;
+}
+
+.service-container .card img{
+    width: 200px;
+    height: auto;
+}
+
+#contacts{
+    display: flex;
+    padding: 48px 64px;
+    background-color: #c8b998;
+    justify-content: space-between;
+}
+
+#contacts aside{
+    flex-basis: 90%;
+}
+
+#contacts aside .profile{
+    height: 280px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #263a53;
+    color: #e9e2d8;
+}
+
+#contacts aside header{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contacts aside header img{
+    height: auto;
+    width: 172px;
+    border-radius: 2px;
+}
+
+#contacts aside section{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contacts .icons-container{
+    display: flex;
+    justify-content: center;
+}
+
+#contacts section .icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contacts section .icons>*{
+    width: 32px;
+    height: 32px;
+    margin-top: 12px;
+}
+
+footer{
+    padding: 14px;
+    color: white;
+    background-color: #263a53;
+    text-align: center;
+    font-size: 12px;
+    box-shadow: 0px -2px 12px 0 #1a283b;
+}
+
+@media screen and (max-width: 1280px){
+    .service-container .card{
+        flex-basis: 38%;
+    }
+
+    #services{
+        height: auto;
+    }    
+}
+/* medium screen */
+@media screen and (max-width: 768px){   
+    #about p{
+        flex-basis: 100%;
+    }
+    
+    #about img{
+        display: none;
+    }
+
+    #services{
+        height: auto;
+    }    
+    
+    #contacts aside .profile{        
+        justify-content: space-evenly;
+    }
+}
+
+/* small screen */
+@media screen and (max-width: 600px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .toggler{
+        display: block;
+        margin: 12px 24px;
+    }
+
+    .jumbotron h2{
+        font-size: 36px;
+    }
+
+    .jumbotron p{
+        font-size: 14px;
+    }
+
+    #contacts{
+        flex-direction: column-reverse;
+    }
+    
+    #contacts aside{
+        flex-basis: 100%;
+        margin-top: 48px;
+        font-size: 0.8em;
+    }
+    
+    #contacts aside .profile{
+        height: 320px;
+        flex-direction: column;
+    }
+    
+    #contacts aside header{
+        flex-basis: 100%;
+    }
+    
+    #contacts aside header img{
+        margin: 0 auto;
+    }
+
+    #contacts section .icons{
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-basis: 4%;
+    }
+
+    #contacts section .icons>*{
+        width: 48px;
+        height: 48px;
+        margin: 0 28px;
+    }   
+}
